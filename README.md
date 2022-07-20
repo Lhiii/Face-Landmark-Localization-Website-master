@@ -54,7 +54,7 @@ activate paddle_env
 conda install paddlepaddle-gpu==2.3.1 cudatoolkit=10.2 --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/
 ```
 
-验证安装：
+验证安装
 
 ```
 import paddle
