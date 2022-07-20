@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FACE &amp; AI</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/pace.css">
+    <link rel="stylesheet" href="static/css/custom.css">
+
+    <!-- js -->
+    <script src="static/js/jquery-2.1.3.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/pace.min.js"></script>
+    <script src="static/js/modernizr.custom.js"></script>
+</head>
+
+<body id="page">
+<div class="container">
+    <header id="site-header">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-8">
+                <div class="logo">
+                    <h1><a href="{{ url_for('index') }}"><b>Black</b> &amp; White</a></h1>
+                </div>
+            </div><!-- col-md-4 -->
+            <div class="col-md-8 col-sm-7 col-xs-4">
+                <nav class="main-nav" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" id="trigger-overlay" class="navbar-toggle">
+                            <span class="ion-navicon"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="cl-effect-11"><a href="{{ url_for('index') }}" data-hover="首页">首页</a></li>
+                            <li class="cl-effect-11"><a href="{{ url_for('faceLocalizationMark') }}" data-hover="人脸关键点">人脸关键点</a></li>
+                            <li class="cl-effect-11"><a href="{{ url_for('yourName') }}" data-hover="你的名字">你的名字</a></li>
+                            <li class="cl-effect-11"><a href="{{ url_for('beautyFace') }}" data-hover="人像美颜">人像美颜</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div><!-- col-md-8 -->
+        </div>
+    </header>
+</div>
+
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+            <main class="col-md-12">
+                <h1 class="page-title">《你的名字》换脸</h1>
+                <article class="post">
+                    <div class="entry-content clearfix">
+                        <form action="#" method="post" class="contact-form" enctype = "multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 fileDiv">
+                                    <span id="fileInfo">选中图片大小为 0KB</span>
+                                    <label for="inputFile" class="fileButton">选择图片</label>
+					                <input type="file" id="inputFile" name="file" accept="image/*"  required>
+                                    <input class="loadFile" type="submit" value="开始上传">
+                                    <div id="imgDiv">{{ result }}</div>
+                                    <img class="image" src="data:image/png;base64, {{ image_url_before }}">
+                                    <img class="image" src="data:image/png;base64, {{ image_url_after }}">
+                                </div>
+                            </div>    <!-- row -->
+                        </form>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+</div>
+<footer id="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="copyright">&copy; 2022 LIU'S ZONE</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Menu -->
+<div class="overlay overlay-hugeinc">
+    <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">首页</a></li>
+            <li><a href="{{ url_for('faceLocalizationMark') }}">人脸关键点</a></li>
+            <li><a href="{{ url_for('yourName') }}">你的名字</a></li>
+            <li><a href="{{ url_for('beautyFace') }}">人像美颜</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script src="static/js/script.js"></script>
+<script src="static/js/myScript.js"></script>
+
+</body>
+</html>

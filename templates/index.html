@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FACE &amp; AI</title>
+
+        <!-- meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- css -->
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="static/css/pace.css">
+        <link rel="stylesheet" href="static/css/custom.css">
+
+        <!-- js -->
+        <script src="static/js/jquery-2.1.3.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/pace.min.js"></script>
+        <script src="static/js/modernizr.custom.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header id="site-header">
+                <div class="row">
+                    <div class="col-md-4 col-sm-5 col-xs-8">
+                        <div class="logo">
+                            <h1><a href="{{ url_for('index') }}"><i>FACE</i> with <b>AI</b></a></h1>
+                        </div>
+                    </div><!-- col-md-4 -->
+                    <div class="col-md-8 col-sm-7 col-xs-4">
+                        <nav class="main-nav" role="navigation">
+                            <div class="navbar-header">
+                                <button type="button" id="trigger-overlay" class="navbar-toggle">
+                                    <span class="ion-navicon"></span>
+                                </button>
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="cl-effect-11"><a href="{{ url_for('index') }}" data-hover="首页">首页</a></li>
+                                    <li class="cl-effect-11"><a href="{{ url_for('faceLocalizationMark') }}" data-hover="人脸关键点">人脸关键点</a></li>
+                                    <li class="cl-effect-11"><a href="{{ url_for('yourName') }}" data-hover="你的名字">你的名字</a></li>
+                                    <li class="cl-effect-11"><a href="{{ url_for('beautyFace') }}" data-hover="人像美颜">人像美颜</a></li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </nav>
+                    </div><!-- col-md-8 -->
+                </div>
+            </header>
+        </div>
+
+        <div class="content-body">
+            <div class="container">
+                <div class="row">
+                    <main class="col-md-13">
+                        <article class="post post-4">
+                            <header class="entry-header">
+                                <h1 class="entry-title">
+                                    <a href="detail.html" class="content-font">基于 Paddle.js WEBGL 计算方案实现人脸关键点检测 SDK</a>
+                                </h1>
+                                <div class="entry-meta">
+                                    <span class="post-category"><a href="#" class="content-font">Baidu AI 实战训练</a></span>
+                                    <span class="post-date"><a href="#" class="content-font"><time class="entry-date"
+                                                                              datetime="2022-06-17T23:15:57+00:00">2022年7月18日</time></a></span>
+                                    <span class="post-author"><a href="#" class="content-font">小刘</a></span>
+                                    <span class="views-count"><a href="#" class="content-font">2 阅读</a></span>
+                                </div>
+                            </header>
+                            <div class="entry-content clearfix">
+                                <p class="content-font">本项目主要包括了人脸关键点检测，《你的名字》动漫中的图片与目标对象进行换脸和 AI 人像美颜 api 的封装，
+                                        并且将以上功能基于 Flask 实现 Web UI 的展示，其中还运用了一点Typescript技术...</p>
+                                <div class="read-more cl-effect-14">
+                                    <a href="{{ url_for('detail') }}" class="more-link content-font">继续阅读 <span class="meta-nav">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <footer id="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="copyright">&copy 2022 - Welcome to <a href="#" target="_blank" title="LIU'S ZONE" class="copyright">LIU'S ZONE</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Mobile Menu -->
+        <div class="overlay overlay-hugeinc">
+            <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">首页</a></li>
+                    <li><a href="{{ url_for('faceLocalizationMark') }}">人脸关键点</a></li>
+                    <li><a href="{{ url_for('yourName') }}">你的名字</a></li>
+                    <li><a href="{{ url_for('beautyFace') }}">人像美颜</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script src="static/js/script.js"></script>
+    </body>
+</html>

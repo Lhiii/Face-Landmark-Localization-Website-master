@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FACE &amp; AI</title>
+
+        <!-- meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- css -->
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="static/css/pace.css">
+        <link rel="stylesheet" href="static/css/custom.css">
+
+        <!-- js -->
+        <script src="static/js/jquery-2.1.3.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/pace.min.js"></script>
+        <script src="static/js/modernizr.custom.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header id="site-header">
+                <div class="row">
+                    <div class="col-md-4 col-sm-5 col-xs-8">
+                        <div class="logo">
+                            <h1><a href="{{ url_for('index') }}"><i>FACE</i> with <b>AI</b></a></h1>
+                        </div>
+                    </div><!-- col-md-4 -->
+                    <div class="col-md-8 col-sm-7 col-xs-4">
+                        <nav class="main-nav" role="navigation">
+                            <div class="navbar-header">
+                                <button type="button" id="trigger-overlay" class="navbar-toggle">
+                                    <span class="ion-navicon"></span>
+                                </button>
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="cl-effect-11"><a href="{{ url_for('index') }}" data-hover="首页">首页</a></li>
+                                    <li class="cl-effect-11"><a href="{{ url_for('faceLocalizationMark') }}" data-hover="人脸关键点">人脸关键点</a></li>
+                                    <li class="cl-effect-11"><a href="{{ url_for('yourName') }}" data-hover="你的名字">你的名字</a></li>
+                                    <li class="cl-effect-11"><a href="{{ url_for('beautyFace') }}" data-hover="人像美颜">人像美颜</a></li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </nav>
+                    </div><!-- col-md-8 -->
+                </div>
+            </header>
+        </div>
+
+        <div class="content-body">
+            <div class="container">
+                <div class="row">
+                    <main class="col-md-13">
+                        <article class="post post-4">
+                            <header class="entry-header">
+                                <h1 class="entry-title">
+                                    <a href="detail.html" class="content-font">基于 Paddle.js WEBGL 计算方案实现人脸关键点检测 SDK</a>
+                                </h1>
+                                <div class="entry-meta">
+                                    <span class="post-category"><a href="#" class="content-font">Baidu AI 实战训练</a></span>
+                                    <span class="post-date"><a href="#" class="content-font"><time class="entry-date"
+                                                                              datetime="2022-06-17T23:15:57+00:00">2022年7月18日</time></a></span>
+                                    <span class="post-author"><a href="#" class="content-font">小刘</a></span>
+                                    <span class="views-count"><a href="#" class="content-font">2 阅读</a></span>
+                                </div>
+                            </header>
+                            <div class="entry-content clearfix">
+                                <p class="content-font">大作业的主要内容：结合 PaddleDetection blazeface_1000e 人脸检测模型和 PaddleHub face_landmark 模型实现人脸关键点检测。</p>
+                                <blockquote><p class="content-font"><i>If I have seen further it is by standing on the shoulders of giants.
+                                    ---Issac Newton</i></p>
+                                    <p class="content-font">本项目主要包括了人脸关键点检测，《你的名字》动漫中的图片与目标对象进行换脸和 AI 人像美颜 api 的封装，
+                                        并且将以上功能基于 Flask 实现 Web UI 的展示，其中还运用了一点Typescript技术。</p>
+                                </blockquote>
+                                    <h3 class="content-font"><u>人脸关键点检测</u></h3>
+                                <p class="content-font">&emsp;&emsp;人脸关键点检测是人脸识别和分析领域中的关键一步，它是诸如自动人脸识别、表情分析、三维人脸重建及三维动画等其它人脸相关问题的前提和突破口。
+                                    该 PaddleHub Module 的模型 face_landmark_localization 转换自<a href='#' class="content-font"> https://github.com/lsy17096535/face-landmark </a>，支持同一张图中的多个人脸检测，
+                                    并将关键点以红色点状的方式画在原图上，保存并显示。</p>
+                                <h3 class="content-font"><u>《你的名字》换脸</u></h3>
+                                <p class="content-font">&emsp;&emsp;此 api 主要在人脸关键点检测 face_landmark_localization 模型进行人脸关键点识别后，
+                                    然后使用《你的名字》动漫中的图片拼出检测出的人脸。其中人脸拼图是以 RGB 颜色均值为标准进行实现的。</p>
+                                <h3 class="content-font"><u>人像美颜</u></h3>
+                                <p class="content-font">&emsp;&emsp;AI美颜核心技术之一就是人脸关键点检测。此api也是人脸关键点检测 face_landmark_localization 模型的一个扩展，
+                                    主要实现了一些基本的美颜效果，像是瘦脸、放大双眼、红唇和美白肌肤。其中瘦脸功能是利用其中3号点到5号点距离作为瘦左脸距离，13号点到15号点距离作为瘦右脸距离，
+                                    然后同时利用局部平移算法完成瘦脸。放大双眼的功能是识别左右眼中的一个位置，并对其进行缩放(图像局部缩放)后实现大眼。
+                                    增添气色的红唇功能是将识别到的唇部位置给涂上红色即可达到相应的目的。美白肌肤的功能是以0号、16号点所在线段为直径的半圆为额头位置来估计出二头所在区域，然后进行美白的处理。</p>
+                                <p class="content-font">项目完整代码托管在 GitHub：<a href='#' class="content-font"> Lhiii </a></p>
+                            </div>
+                        </article>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <footer id="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="copyright">&copy 2022 - Welcome to <a href="#" target="_blank" title="LIU'S ZONE">LIU'S ZONE</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Mobile Menu -->
+        <div class="overlay overlay-hugeinc">
+            <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">首页</a></li>
+                    <li><a href="{{ url_for('faceLocalizationMark') }}">人脸关键点</a></li>
+                    <li><a href="{{ url_for('yourName') }}">你的名字</a></li>
+                    <li><a href="{{ url_for('beautyFace') }}">人像美颜</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script src="static/js/script.js"></script>
+    </body>
+</html>
