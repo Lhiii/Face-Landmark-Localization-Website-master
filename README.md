@@ -14,15 +14,7 @@
 
 #### 3. **使用** **TypeScript** **开发**
 
-## 二、环境准备
-
-* conda
-* cuda 和 cuDNN
-* PaddlePaddle
-* PaddleHub
-* Typescript
-
-### 数据集
+## 二、数据集
 
 * 介绍
 
@@ -31,7 +23,15 @@
 * 下载地址
 
   https://aistudio.baidu.com/aistudio/datasetdetail/31722
-  
+
+## 三、环境准备
+
+* conda
+* cuda 和 cuDNN
+* PaddlePaddle
+* PaddleHub
+* Typescript
+
 ### 安装环境
 
 #### PaddlePaddle 安装
@@ -101,7 +101,7 @@ pip install flask
 
 使用 **flask** 命令或者 python 的 `-m` 开关来运行 APP.py 应用，最后在浏览器中打开 http://127.0.0.1:5000/ 即可看到运行界面。
 
-## 三、效果展示
+## 四、效果展示
 
 * 首页页面
 
