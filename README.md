@@ -95,23 +95,23 @@ pip install flask
 
 * 首页页面
 
-  ![image-20220720120916796](Lhiii/Face-Landmark-Localization-Website-master\sources\image-20220720120916796.png)
+  ![image-20220720120916796](https://github.com/Lhiii/Face-Landmark-Localization-Website-master/blob/main/sources/image-20220720120916796.png)
 
 * 网页介绍页面
 
-  ![image-20220720121013948](H:\Windows\Desktop\project\sources\image-20220720121013948.png)
+  ![image-20220720121013948](https://github.com/Lhiii/Face-Landmark-Localization-Website-master/blob/main/sources/image-20220720121013948.png)
 
 * 人脸关键点检测页面
 
-  ![image-20220720121033601](H:\Windows\Desktop\project\sources\image-20220720121033601.png)
+  ![image-20220720121033601](https://github.com/Lhiii/Face-Landmark-Localization-Website-master/blob/main/sources/image-20220720121033601.png)
 
 * 《你的名字》动漫图换脸页面
 
-  ![image-20220720121113878](H:\Windows\Desktop\project\sources\image-20220720121113878.png)
+  ![image-20220720121113878](https://github.com/Lhiii/Face-Landmark-Localization-Website-master/blob/main/sources/image-20220720121113878.png)
 
 * **AI** 人像美颜
 
-![image-20220720121139333](H:\Windows\Desktop\project\sources\image-20220720121139333.png)
+![image-20220720121139333](https://github.com/Lhiii/Face-Landmark-Localization-Website-master/blob/main/sources/image-20220720121139333.png)
 
 ## 四、版本信息
 
