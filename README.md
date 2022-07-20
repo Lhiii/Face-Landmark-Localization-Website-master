@@ -123,7 +123,7 @@ pip install flask
 
 ![image-20220720121139333](https://github.com/Lhiii/Face-Landmark-Localization-Website-master/blob/main/sources/image-20220720121139333.png)
 
-## 四、版本信息
+## 五、版本信息
 
 * 1.0.0
 
