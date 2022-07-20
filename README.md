@@ -95,7 +95,7 @@ pip install flask
 
 * 首页页面
 
-  ![image-20220720120916796](.\sources\image-20220720120916796.png)
+  ![image-20220720120916796](Lhiii/Face-Landmark-Localization-Website-master\sources\image-20220720120916796.png)
 
 * 网页介绍页面
 
